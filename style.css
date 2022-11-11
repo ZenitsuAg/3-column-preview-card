@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&display=swap);
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lexend Deca", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+    padding: 10px;
+}
+
+
+h1 {
+    font-family: "Big Shoulders Display", Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: "Lexend Deca",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+main {
+    border-radius: 10px;
+    max-width: 375px;
+}
+
+article{
+    padding: 0 30px;
+    color: hsla(0, 0%, 100%, 0.75);
+    height: 517px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;  
+}
+
+.btn {
+    border: none;
+    border-radius: 25px;
+    padding: 20px;
+    cursor: pointer;
+    max-width: 50%;
+
+}
+
+.sedan-column {
+    background-image: url(images/icon-sedans.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(31, 77%, 52%);
+    background-position: 30px 30px;
+      
+}
+
+.sedan-column button {
+    color: hsl(31, 77%, 52%);
+}
+
+.suv-column {
+    background-image: url(images/icon-suvs.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(184, 100%, 22%);
+    background-position: 30px 30px;
+}
+
+.suv-column button {
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury-column {
+    background-image: url(images/icon-luxury.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(179, 100%, 13%);
+    background-position: 30px 30px;
+}
+
+.luxury-column button {
+    color: hsl(179, 100%, 13%);
+}
+
+@media screen and (min-width:700px){
+    body {
+        width: 1440px;
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        min-width: 936px;
+        max-height: 531px;
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-areas: 
+        "one two three";
+        overflow: hidden;
+        padding: 0;
+    }
+
+    article {
+        height: 531px;
+    }
+
+    .luxury-column {
+        grid-area: one;
+    }
+
+    .suv-column {
+        grid-area: two;
+    }
+
+    .luxury-column {
+        grid-area: three;
+    }
+
+    button:hover {
+        color:hsl(0, 0%, 95%);
+        background-color: transparent;
+        border: 2px solid hsl(0, 0%, 95%);
+    }
+}
